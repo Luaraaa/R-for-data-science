@@ -3,5 +3,6 @@ library(palmerpenguins)
 library(dplyr)
 library(ggthemes)
 
-ggplot(diamonds, aes(x = carat, fill = carat)) +
-    geom_histogram(binwidth = 20) 
+diamonds$carat <- cut(diamonds$carat, breaks = 10)
+ggplot(diamonds, aes(x = carat, fill = carat_cat)) +
+    geom_histogram(binwidth = 20)
