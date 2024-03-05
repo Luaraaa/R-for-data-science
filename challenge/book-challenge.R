@@ -18,7 +18,7 @@ ggplot(
 ) +
   geom_point(aes(color = species, shape = sex)) +
   geom_smooth(method = "lm") +
-geom_point(
+  geom_point(
     data = media_por_especie_sexo,
     mapping = aes(x = media_bill_length_mm, y = media_bill_depth_mm, color = species, shape = sex),
     size = 5
@@ -32,4 +32,4 @@ geom_point(
     shape = "Sexo"
   ) +
   scale_color_colorblind() +
-  theme_clean()
+  theme_clean() 
