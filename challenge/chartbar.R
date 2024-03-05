@@ -3,5 +3,5 @@ library(palmerpenguins)
 library(dplyr)
 library(ggthemes)
 
-ggplot(penguins, aes(x = species, fill = species)) +
-    geom_bar() 
+ggplot(diamonds, aes(x = carat, fill = carat)) +
+    geom_histogram() 
