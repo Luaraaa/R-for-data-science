@@ -4,4 +4,4 @@ library(dplyr)
 library(ggthemes)
 
 ggplot(diamonds, aes(x = carat, fill = carat)) +
-    geom_histogram() 
+    geom_histogram(binwidth = 20) 
