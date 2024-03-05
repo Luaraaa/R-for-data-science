@@ -3,5 +3,5 @@ library(palmerpenguins)
 library(dplyr)
 library(ggthemes)
 
-ggplot(penguins, aes(y = species)) +
-    geom_bar()
+ggplot(penguins, aes(x = species)) +
+    geom_bar(fill = species) 
