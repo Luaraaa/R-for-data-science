@@ -1,7 +1,11 @@
 library(ggplot2)
 library(dplyr)
-library(ggthemes)
+library(viridis)
 
-ggplot(mpg, aes(x = displ, y = hwy)) +
-    geom_point(aes(color = class, shape = drv)) +
-scale_color_colorblind()
+# conversão da variável cyl para fator (variável categórica)
+mpg$cyl <- as.factor(mpg$cyl)
+str(mpg$cyl)
+
+ggplot(mpg, aes(x = hwy, y = displ)) +
+    geom_point(aes(color = year, size = year, shape = cyl)) +
+    scale_color_viridis()
